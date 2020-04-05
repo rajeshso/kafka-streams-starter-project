@@ -10,7 +10,6 @@ import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.Topology;
-import org.apache.kafka.streams.kstream.Grouped;
 import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.KTable;
 import org.apache.kafka.streams.kstream.Materialized;
@@ -107,7 +106,7 @@ public class FavoriteColor {
   }
 
   private Properties createProperties() {
-    Properties config = new Properties(5);
+    Properties config = new Properties(6);
     config.put(StreamsConfig.APPLICATION_ID_CONFIG, COLOR_STREAMS_STARTER_APP);
     config.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG,"127.0.0.1:9092");
     config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,"earliest");
